@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class passerRatingFormulas {
 
 	public passerRatingFormulas() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner input = new Scanner(System.in);
 		double numberPassAttempts;
 		double numberOfCompletions;
@@ -37,7 +37,12 @@ public class passerRatingFormulas {
 		
 		double passerRating= ((varA + varB + varC + varD)/6)*100;
 		
-		System.out.println(passerRating);
+		if (passerRating <= 0)
+			System.out.println("invalid rating");
+		else if (passerRating >= 158.3)
+			System.out.println("invalid rating");
+		else
+			System.out.println(passerRating);
 		
 		
 		
